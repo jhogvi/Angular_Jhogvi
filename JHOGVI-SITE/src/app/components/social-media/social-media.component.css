@@ -1,0 +1,30 @@
+.social__container {
+	background-color: transparent;
+	margin: 5px;
+}
+
+.social-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: transparent;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+	transform: scale(1.1);
+	/* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
+}
+
+/* Ajuste para manter os ícones proporcionais */
+.social-btn img {
+	background-color: transparent;
+
+	width: 80%;
+	height: 80%;
+	object-fit: contain; /* Evita cortes */
+}

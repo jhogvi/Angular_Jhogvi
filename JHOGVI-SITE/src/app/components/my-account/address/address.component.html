@@ -1,0 +1,11 @@
+<div class="address__container">
+	<div>
+	  <p><strong>Rua:</strong> {{ endereco.rua }}, {{ endereco.numero }} - Complemento: {{endereco.complemento}}</p>
+	  <p><strong>Bairro:</strong> {{ endereco.bairro }}</p>
+	  <p><strong>Cidade:</strong> {{ endereco.cidade }} - {{ endereco.estado }}</p>
+	  <p><strong>CEP:</strong> {{ endereco.cep }}</p>
+	  <p *ngIf="endereco.referencia!==null"><strong>Referencia:</strong> {{ endereco.referencia }}</p>
+
+	</div>
+
+  </div>

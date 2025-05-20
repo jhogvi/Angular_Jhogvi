@@ -1,0 +1,108 @@
+.elements__container {
+	display: flex;
+	flex-direction: column;
+	min-width: 60%;
+	overflow: hidden;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .elements_content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 95%;
+	padding: 5px 10px; /* Reduzi o padding */
+  }
+
+  /* Checkbox */
+  .product_check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+
+  }
+
+  /* Coluna Produto */
+  .elements_products {
+	display: flex;
+	align-items: center;
+	width: 40%;
+	justify-content: flex-start;
+  }
+
+  .elements_products > a {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	flex-wrap: nowrap;
+  }
+
+  .elements_products > a > img {
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	/* flex-shrink: 0; */
+  }
+
+  .elements_products > a > p {
+	flex: 1;
+	font-size: 14px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0 5px; /* Reduzi o espaçamento ao redor do texto */
+  }
+
+  /* Quantidade */
+  .button_qtd {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	width: 15%;
+
+  }
+
+  .change {
+	width: 30px;
+	height: 10px;
+	font-size: 14px;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	padding-bottom: 20px;
+  }
+
+  .change:hover {
+	background-color: #e0e0e0;
+	font-weight: 600;
+  }
+
+  .button_qtd p {
+	font-weight: bold;
+  }
+
+  /* Preços */
+  .elements_price {
+	display: flex;
+	/* border: 2px solid red; */
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5px;
+	width: 35%;
+
+  }
+
+  .elements_price > h4,
+  .elements_price > p {
+	margin: 0 10px; /* Reduzi a margem dos preços */
+  }

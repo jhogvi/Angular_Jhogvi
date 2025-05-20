@@ -1,0 +1,11 @@
+.footer__container{
+	position: static;
+	bottom: 0;
+  margin-top: auto; /* Empurra o footer para a parte inferior */
+
+	width: 100%;
+	min-height: 10vh;
+	background-color: black;
+	color: white;
+	border-top: 4px solid rgb(3, 85, 0);
+}

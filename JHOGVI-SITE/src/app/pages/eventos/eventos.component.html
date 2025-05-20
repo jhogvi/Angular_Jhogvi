@@ -1,0 +1,49 @@
+
+<div class="eventos__container">
+	<div class="events_filter">
+		<!-- Filtro de Eventos -->
+		<app-filter
+		[filterType]="'event'"
+		[subcategoryTitle]="'Subcategoria'"
+		[typeTitle]="'Tipo'"
+		[locationTitle]="'Localidade'"
+		[nameTitle]="'Nome do Evento'"
+		[typeOptions]="typeOptions|| []"
+		[subcategoryOptions]="opcoesSubcategorias"
+		[locationOptions]="opcoesLocalidades"
+		[nameOptions]="nameOptions"
+		(filter)="applyFilters($event)"
+		(clear)="clearFilters()"
+		[feedbackMessage]="feedbackMessage"
+		[showFeedback]="showFeedback"
+  		/>
+	</div>
+<div>
+
+</div>
+	<div class="events_cards">
+		<h1>Eventos</h1>
+		<!-- <div *ngIf="showFeedback" class="feedback-box">
+			{{ feedbackMessage }}
+		</div> -->
+		<div *ngIf="filteredEvents.length !== 0; else noEvents">
+			<!-- Cards dos Eventos -->
+			<app-card-event
+			  *ngFor="let event of filteredEvents"
+			  [id]="event.id"
+			  [title]="event.titulo"
+			  [imgEvent]="event.imagens[0]"
+			  [subcategoria]="event.subcategoria"
+			  [local]="event.local"
+			  [city]="event.localidade"
+			  [street]="event.endereco"
+			  [date]="event.data"
+			  [price]="event.entrada"
+			/>
+		  </div>
+
+		  <ng-template #noEvents>
+			<p>Nenhum resultado encontrado.</p>
+		  </ng-template>
+	</div>
+</div>

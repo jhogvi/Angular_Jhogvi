@@ -1,0 +1,37 @@
+<div class="content__container" *ngIf="event">
+		<div class="content__main">
+			<div class="content__cover">
+				<img [src]="event.imagens[0]" alt="Imagem do Evento" />
+			</div>
+
+			<div class="content__elements">
+				<div class="content__title">
+					<h1>{{ event.titulo }}</h1>
+				</div>
+
+				<div class="content__description">
+					<p>{{ event.descricao }}</p>
+				</div>
+
+				<div class="content__price">
+					<div>
+						<h3 class="current__price" *ngIf="event.entrada > 0">
+							Entrada: R$ {{ formatBrl.formatBrl(event.entrada) }}
+							</h3>
+							<h3 class="current__price" *ngIf="event.entrada <= 0">
+							Entrada Gratuita para Primeiras Compras
+							</h3>
+
+
+					</div>
+					<div class="content__shopping">
+						<ul>
+							<li>
+							<button (click)="addToCart()">Adquirir Ingresso</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="right__container" [ngStyle]="getBackgroundStyle()">
+	<div class="right_informations">
+		<h1>{{titulo}}</h1>
+		<p *ngFor="let frase of descricao">{{frase}}</p>
+		<span *ngFor="let detalhe of detalhes">{{detalhe}}</span>
+	</div>
+	<div class="social_buttons">
+		<app-social-media
+		*ngFor="let social of socialLinks"
+		[tipoSocial]="social.tipoSocial"
+		[icoSocial]="social.icoSocial"
+		[linkSocial]="social.linkSocial">
+	  </app-social-media>
+
+	</div>
+
+<div>

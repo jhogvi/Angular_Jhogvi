@@ -1,0 +1,156 @@
+<!-- Painel principal -->
+<div class="account__container">
+	<!-- Perfil -->
+	<div class="account_profile">
+	  <div class="my_photo">
+		<img [src]="clientData.photo" alt="Foto">
+		<h2>{{ clientData.firstName + ' ' + clientData.lastName }}</h2>
+		<a (click)="toggleSection('profile')">Editar</a>
+	  </div>
+
+	  <div class="my_info">
+		<ul>
+		  <a (click)="toggleSection('wallet')">
+			<li class="li_profile">
+			  <img [src]="icoCarteira" alt="Carteira">
+			  <h4>Carteira</h4>
+			  <h4>Pix | Cartões</h4>
+			</li>
+		  </a>
+		  <a [routerLink]="'/carrinho'">
+			<li class="li_profile">
+			  <img [src]="icoCarrinho" alt="Carrinho">
+			  <h4>Carrinho</h4>
+			  <h4>de Compras</h4>
+			</li>
+		  </a>
+		  <a (click)="toggleSection('address')">
+			<li class="li_profile">
+			  <img [src]="icoEndereco" alt="Casa">
+			  <h4>Endereços</h4>
+			</li>
+		  </a>
+		  <a (click)="toggleSection('orders')">
+			<li class="li_profile">
+			  <img [src]="icoCompras" alt="Compras">
+			  <h4>Histórico</h4>
+			  <h4>de Compras</h4>
+			</li>
+		  </a>
+		  <a [routerLink]="'/suporte'">
+			<li class="li_profile">
+			  <img [src]="icoSup" alt="Ajuda">
+			  <h4>Suporte</h4>
+			  <h4>Sugestões</h4>
+			</li>
+		  </a>
+		</ul>
+	  </div>
+	</div>
+
+	<!-- Pedidos -->
+	<div class="account_requests">
+	  <ul>
+		<a (click)="toggleSection('orders')">
+		  <li class="li_pedidos">
+			<img [src]="imgPedidosGeral" alt="Todos Pedidos">
+			<h4>Meus Pedidos</h4>
+		  </li>
+		</a>
+		<a (click)="toggleSection('orders')">
+		  <li class="li_pedidos">
+			<img [src]="imgRastreioPedidos" alt="Rastreio">
+			<h4>Rastrear Pedido</h4>
+		  </li>
+		</a>
+		<a (click)="toggleSection('orders')">
+		  <li class="li_pedidos">
+			<img [src]="imgPedidosConcluidos" alt="Pedidos Concluidos">
+			<h4>Pedidos Concluídos</h4>
+		  </li>
+		</a>
+		<a (click)="toggleSection('orders')">
+		  <li class="li_pedidos">
+			<img [src]="imgMinhasAvaliacoes" alt="Minhas Avaliacoes">
+			<h4>Minhas Avaliações</h4>
+		  </li>
+		</a>
+	  </ul>
+	</div>
+  </div>
+
+  <!-- PROFILE -->
+  <div *ngIf="showProfileEditor" class="modal-overlay">
+	<div class="modal-content">
+		<button class="close-btn" (click)="closeAllSections()">&times;</button>
+		<app-profile
+		*ngIf="showProfileEditor"
+		[dados]="clientData"
+		(salvar)="saveProfile($event)"
+		(fechar)="closeAllSections()"
+	  ></app-profile>
+	</div>
+  </div>
+
+  <!-- ADDRESS -->
+  <div *ngIf="showAddressEditor" class="modal-overlay">
+	<div class="modal-content">
+		<button class="close-btn" (click)="closeAllSections()">&times;</button>
+		<h3>Endereços</h3>
+
+	  <form *ngIf="editandoEnderecos">
+		<div *ngFor="let endereco of clientData.enderecos; let i = index" class="endereco-item">
+		  <label>
+			<div class="endereco-form">
+			  <input [(ngModel)]="endereco.rua" name="rua{{i}}" placeholder="Rua" required />
+			  <input [(ngModel)]="endereco.numero" name="numero{{i}}" type="number" placeholder="Número" required />
+			  <input [(ngModel)]="endereco.complemento" name="complemento{{i}}" placeholder="Complemento" required />
+			  <input [(ngModel)]="endereco.bairro" name="bairro{{i}}" placeholder="Bairro" required />
+			  <input [(ngModel)]="endereco.cidade" name="cidade{{i}}" placeholder="Cidade" required />
+			  <input [(ngModel)]="endereco.estado" name="estado{{i}}" placeholder="Estado" required />
+			  <input [(ngModel)]="endereco.cep" name="cep{{i}}" placeholder="CEP" required />
+			  <input [(ngModel)]="endereco.referencia" name="referencia{{i}}" placeholder="Referencia" required />
+			</div>
+			<button type="button" (click)="removerEndereco(i)">Remover</button>
+		  </label>
+		</div>
+	  </form>
+
+	  <div *ngIf="!editandoEnderecos">
+		<div *ngFor="let endereco of clientData.enderecos; let i = index" class="endereco-item">
+		  <p>{{ endereco.rua }}, {{ endereco.numero }} ({{endereco.complemento}})- {{ endereco.bairro }} - {{ endereco.cidade }} / {{ endereco.estado }} - {{ endereco.cep }}</p>
+		  <p>Referencia: {{endereco.referencia}}</p>
+		  <div class="options">
+			<button (click)="definirComoPrincipal(i)" [disabled]="endereco.isPrincipal">
+			  {{ endereco.isPrincipal ? 'Endereço Principal' : 'Definir Este Como principal' }}
+			</button>
+		  </div>
+		</div>
+		<button class="editar" (click)="editandoEnderecos = true">Editar Endereços</button>
+		<button class="close-button" (click)="closeAllSections()"> Fechar</button>
+	  </div>
+
+	  <div *ngIf="editandoEnderecos" class="modal-options">
+		<button class="add" (click)="adicionarNovoEndereco()">Adicionar novo endereço</button>
+		<button class="save" (click)="salvarEndereco()">Salvar alterações</button>
+		<button class="cancel" (click)="cancelarEdicao()">Cancelar</button>
+	  </div>
+	</div>
+  </div>
+
+  <!-- ORDERS -->
+  <div *ngIf="showOrdersSection" class="modal-overlay">
+	<div class="modal-content">
+		<button class="close-btn" (click)="closeAllSections()">&times;</button>
+
+	  <app-orders (fechar)="showOrdersSection = false"></app-orders>
+	</div>
+  </div>
+
+  <!-- WALLET -->
+  <div *ngIf="showWalletSection" class="modal-overlay">
+	<div class="modal-content">
+		<button class="close-btn" (click)="closeAllSections()">&times;</button>
+		<app-wallet (fechar)="showWalletSection = false"></app-wallet>
+	</div>
+  </div>

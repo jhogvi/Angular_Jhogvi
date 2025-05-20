@@ -1,0 +1,50 @@
+
+.resulted__container{
+	min-width:10vw;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 15px;
+  }
+
+  .tb-end table {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center; /* Centraliza o conteúdo */
+  }
+
+  .tb-end > table > tr> th{
+	text-align: left;
+  }
+
+  .tb-end > table > tr> td{
+	text-align: right;
+  }
+
+
+  /* Destaque para o "Total" */
+  .total {
+	margin: 100px;
+	font-size: 18px;
+	font-weight: bold;
+  }
+
+  /* Estilo para o botão */
+  .tb-end button {
+	width: 100%;
+	margin-top: 15px;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: white;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+
+  .tb-end button:hover {
+	background-color: #0056b3;
+  }
+
+  .tb-end button:active {
+	transform: scale(1.1);
+  }

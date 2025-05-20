@@ -1,0 +1,19 @@
+<div class="alert__container">
+	<div class="informacao">
+		<h2>Você precisa adquirir um produto para acessar o evento!</h2>
+		<p>Deseja ser redirecionado para algum dos produtos vinculados?</p>
+
+
+	</div>
+	<div class="produtos">
+		<button
+		  *ngFor="let produto of produtosVinculados"
+		  (click)="redirecionarPara(produto.id)"
+		  class="btn-produto">Ver Produto {{produto.id}}</button>
+	  </div>
+
+	  <div class="botoes">
+		<button class="btn-cancelar" (click)="fechar()">Fechar</button>
+	  </div>
+
+</div>

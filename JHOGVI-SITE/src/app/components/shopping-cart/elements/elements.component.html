@@ -1,0 +1,22 @@
+<div class="elements__container">
+	<div class="elements_content" *ngIf="(qtd!=0)">
+		<div class="product_check">
+			<input type="checkbox" [checked]="isSelected" (change)="onSelectionChange($event)">
+		</div>
+	  	<div class="elements_products">
+			<a [routerLink]="['/content', id]">
+				<img [src]="prodImg" alt="Img Prod" class="img-prod">
+				<p>{{prodName}}</p>
+			</a>
+	  	</div>
+	  	<div class="button_qtd">
+			<button (click)="decreaseQtd()" class="change">-</button>
+			<p>{{qtd}}</p>
+			<button (click)="increaseQtd()" class="change">+</button>
+	  	</div>
+	  	<div class="elements_price">
+			<p>R$ {{formatBrl.formatBrl(price)}}</p>
+			<h4>R$ {{formatBrl.formatBrl(priceTotal)}}</h4>
+	  	</div>
+	</div>
+  </div>

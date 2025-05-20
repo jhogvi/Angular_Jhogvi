@@ -1,0 +1,166 @@
+.menu__container{
+	position: static; /* Começa como absoluto */
+	top: 0;
+	z-index: 999;
+
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	min-height: 100px;
+	/*width: 98vw; */
+	width: 100%;
+	background-color: black;
+	border-bottom: 4px solid rgb(3, 85, 0);
+}
+
+/* .menu__container.fixed {
+	position: fixed;
+	top: 0;
+	width: 99vw;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao fixar */
+	/* transform: translateY(10); Suaviza o movimento */
+  /* } */
+
+
+.menu_logo{
+	background-color:inherit;
+	height: 100%;
+	width: 15vw;
+
+}
+
+.menu_logo > a {
+    display: block; /* Torna o link um bloco para que ele ocupe o espaço todo do container */
+	height: 90px;
+	width: 90px;
+	overflow: hidden;
+	background-color: transparent;
+	border-radius: 50%; /* Imagem circular */
+	margin: 10px 30px ;
+	position: relative;  /* Permite posicionar a imagem dentro do link */
+}
+
+.menu_logo > a > img {
+	position: absolute;  /* Permite que a imagem ocupe toda a área do link */
+    top: 50%;  /* Posiciona a imagem no centro vertical do link */
+    left: 50%;  /* Posiciona a imagem no centro horizontal do link */
+    transform: translate(-50%, -50%);  /* Ajusta para que a imagem fique perfeitamente centralizada */
+    object-fit: cover; /* Faz com que a imagem se ajuste corretamente, mantendo a proporção */
+
+    height: 90%;
+    width: 90%;
+	background-color: transparent;
+}
+
+.menu_search{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.search{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 25px;
+	width: 20vw;
+
+	border-radius: 15px;
+	padding: 0px 15px;
+	border: 2px solid silver;
+}
+
+.search:focus-within{
+	box-shadow: 0px 0px 3px aqua;
+	transform: scale(1.1);
+}
+
+
+
+.search>input{
+	all: unset; /* Remove todas as formatações padrão */
+	width: 85%;
+
+}
+
+.search>button{
+	all: unset; /* Remove todas as formatações padrão */
+	cursor: pointer;
+	width: 10%;
+
+
+}
+
+.search>button:active{
+	transform: scale(0.8);
+}
+
+
+.menu_options{
+	display: block; /* Torna o link um bloco para que ele ocupe o espaço todo do container */
+
+	min-width: 50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+
+}
+
+.options{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.options > a {
+	list-style: none;
+	text-decoration: none;
+	color: inherit;
+	position: relative;  /* Necessário para posicionar o pseudo-elemento */
+	display: inline-block;
+	margin-left:20px;
+	transition: color 0.3s ease; /* Transição da cor */
+
+	font-weight: bold;
+
+}
+.options > a > li{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+
+/**********/
+
+  /* Criando a linha vermelha embaixo do link */
+  .options > a > li::after {
+	content: '';  /* Necessário para criar o pseudo-elemento */
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;  /* Espessura da linha */
+	background-color:rgb(3, 99, 0);  /* Cor da faixa */
+	transition: width 0.3s ease; /* Transição suave para a largura */
+  }
+
+  /* No hover, aumentamos a largura da linha */
+  .options > a > li:hover {
+	color: gray;  /* Cor do link no hover */
+  }
+
+  .options > a > li:hover::after {
+	width: 100%;  /* Faz a linha se expandir */
+  }

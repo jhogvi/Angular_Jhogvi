@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	 /* color: white; */
+	/*background-color: black; */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dark-theme {
+	background-color: #121212;
+	color: white;
+  }
+
+  /* Ajustes para Angular Material */
+  .dark-theme .mat-form-field-appearance-fill .mat-form-field-flex {
+	background-color: #1e1e1e;
+	color: white;
+  }
+
+  .dark-theme .mat-input-element {
+	color: white;
+  }
+
+  .dark-theme .mat-select-value {
+	color: white;
+  }
+
+  .dark-theme .mat-select-panel {
+	background-color: #1e1e1e;
+	color: white;
+  }
+
+  .dark-theme .mat-option {
+	background-color: #1e1e1e;
+	color: white;
+  }
+
+  .dark-theme .mat-option:hover {
+	background-color: #333;
+  }
+
+  .dark-theme .mat-button,
+  .dark-theme .mat-raised-button,
+  .dark-theme .mat-flat-button {
+	color: white;
+	background-color: #333;
+  }
+
+  .dark-theme .mat-button:hover,
+  .dark-theme .mat-raised-button:hover,
+  .dark-theme .mat-flat-button:hover {
+	background-color: #444;
+  }

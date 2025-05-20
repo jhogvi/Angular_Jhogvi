@@ -1,0 +1,18 @@
+<div class="mini__container">
+	<a [routerLink]="['/produto', id]">
+		<div class="mini_img">
+			<img [src]="imgProduct" alt="Imagem do Produto">
+		</div>
+		<div class="mini_content">
+			<h2> {{title}} </h2>
+			<span> R$ {{formatBrl.formatBrl(price)}}</span>
+		</div>
+	</a>
+
+		<div class="mini_buttons">
+			<button><a [routerLink]="['/produto', id]">Ver Detalhes</a></button>
+			<button (click)="addProductToCart()">Adicionar ao Carrinho</button>
+		</div>
+
+</div>
+

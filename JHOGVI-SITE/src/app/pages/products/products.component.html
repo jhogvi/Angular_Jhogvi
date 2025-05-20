@@ -1,0 +1,37 @@
+<div class="products__container">
+	<div class="products_filter">
+	  <app-filter
+		[filterType]="'product'"
+		(filter)="applyFilters($event)"
+		(clear)="clearFilters()"
+		[typeOptions]="typeOptions"
+		[subcategoryOptions]="categoryOptions"
+		[nameOptions]="nameOptions"
+		[subcategoryTitle]="'Subcategoria'"
+		[typeTitle]="'Tipo'"
+		[nameTitle]="'Nome'"
+		[feedbackMessage]="feedbackMessage"
+		[showFeedback]="showFeedback"
+	  ></app-filter>
+	</div>
+
+	<!-- Produtos encontrados -->
+	<div class="products_cards" *ngIf="filteredProducts.length !== 0">
+	  <h1>Produtos</h1>
+	  <div>
+		<app-mini-card
+		  *ngFor="let prod of filteredProducts"
+		  [detail]="prod.detalhes"
+		  [id]="prod.id"
+		  [imgProduct]="prod.imagens[0]"
+		  [title]="prod.titulo"
+		  [price]="prod.preco"
+		></app-mini-card>
+	  </div>
+	</div>
+
+	<!-- Nenhum resultado -->
+	<div *ngIf="filteredProducts.length === 0">
+	  <p>Nenhum resultado encontrado.</p>
+	</div>
+  </div>

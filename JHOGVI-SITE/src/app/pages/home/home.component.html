@@ -1,0 +1,33 @@
+<div class="home__container">
+	<div class="content">
+		<div class="bone_filter">
+			<button *ngFor="let produto of produtos"
+				(click)="selecionarBone(produto)"
+				[class.active]="selectedBone?.cor === produto.cor"
+				[ngStyle]="{ 'background-color': produto.cor }">
+				<img [src]="produto.imagens[0]" alt="">
+			</button>
+		</div>
+		<div class="left">
+			<app-left
+			*ngIf="selectedBone; else placeholderLeft"
+			[imgMockups]="selectedBone.imagens"
+			[backgroundImage]="'assets/plataforma_digital.jpg'"
+			(comprar)="handleComprar()"/>
+		</div>
+		<ng-template #placeholderLeft>
+			<div class="placeholder">Selecione um produto para ver os detalhes</div>
+		</ng-template>
+		<div class="right">
+			<app-right
+			*ngIf="selectedBone; else placeholderLeft"
+			[imgBack]="imgBack"
+			[titulo]="selectedBone.titulo"
+			[descricao]="selectedBone.descricao"
+			[detalhes]="selectedBone.detalhes"/>
+		 </div>
+
+
+	</div>
+</div>
+

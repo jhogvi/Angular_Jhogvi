@@ -1,0 +1,44 @@
+<div class="contact__container">
+	<h1>Contatos</h1>
+	<table class="contact_table">
+	  <tr>
+		<td><strong>Telefone:</strong></td>
+		<td><a [href]="telLink" target="_blank">{{ formatarTelefone(celular) }}</a></td>
+	  </tr>
+	  <tr>
+		<td><strong>Whatsapp:</strong></td>
+		<td><a [href]="whatsappLink" target="_blank">{{ formatarTelefone(celular, true) }}</a></td>
+	  </tr>
+	  <tr>
+		<td><strong>Celular:</strong></td>
+		<td><a [href]="telLink" target="_blank">{{ formatarTelefone(celular, true) }}</a></td>
+	  </tr>
+	  <tr>
+		<td><strong>E-mail:</strong></td>
+		<td><a [href]="mailtoLink" target="_blank">{{ email }}</a></td>
+	  </tr>
+	  <tr>
+		<td><strong>Facebook:</strong></td>
+		<td><a [href]="facebook" target="_blank">Facebook</a></td>
+	  </tr>
+	  <tr>
+		<td><strong>Instagram:</strong></td>
+		<td><a [href]="instagram" target="_blank">Instagram</a></td>
+	  </tr>
+	</table>
+
+	<div class="social_buttons">
+		<button>
+			<a [href]="whatsappSocial.linkSocial" target="_blank" >
+				<app-social-media
+				[tipoSocial]="whatsappSocial.tipoSocial"
+				[icoSocial]="whatsappSocial.icoSocial"
+				[linkSocial]="whatsappSocial.linkSocial">
+				</app-social-media>
+				<h3>Entre em contato no {{whatsappSocial.tipoSocial}}</h3>
+			</a>
+		</button>
+	</div>
+
+
+  </div>

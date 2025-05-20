@@ -1,0 +1,20 @@
+<div class="event__container">
+	<a [routerLink]="['/event/', id]" class="linkEvent">
+		<div class="imgEvent">
+			<img [src]="imgEvent" alt="">
+		</div>
+		<div class="event_contents">
+			<h1>{{title}}</h1>
+			<h2>Categoria: {{subcategoria}}</h2>
+			<h4 class="city">Localizado em {{city}}</h4>
+			<span class="street">Endereço: {{street}}</span>
+			<div class="valor">
+				<h3 *ngIf="price<=0">Entrada Gratuita para Primeiras Compras</h3>
+				<span *ngIf="price>0"><strong>Ingresso: </strong> R$ {{formatBrl.formatBrl(price)}}</span>
+
+			</div>
+			<p class="date">Acontecerá no dia {{date}}</p>
+		</div>
+	</a>
+
+</div>

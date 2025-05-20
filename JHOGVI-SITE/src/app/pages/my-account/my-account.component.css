@@ -1,0 +1,318 @@
+/* ========== CONTAINER PRINCIPAL ========== */
+.account__container {
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 20px 0px;
+	gap: 20px;
+}
+
+/* ========== PERFIL DO USUÁRIO ========== */
+.account_profile {
+	border: 2px solid silver;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	min-height: 20vh;
+	padding: 20px;
+}
+
+.my_photo {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 20px;
+}
+
+.my_photo > img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: aliceblue;
+	box-shadow: 0px 0px 2px 3px rgb(0, 148, 7);
+}
+
+/* ========== INFORMAÇÕES DO PERFIL ========== */
+.my_info,
+.my_info > ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.my_info > ul {
+	gap: 20px;
+	justify-content: space-around;
+}
+
+.my_info > ul > a,
+.account_requests > ul > a {
+	list-style: none;
+	text-decoration: none;
+	color: inherit;
+	font-size: 16px;
+}
+
+.li_profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.li_profile > img {
+	margin: 10px 0 20px;
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+	border-radius: 50%;
+	background-color: aliceblue;
+	box-shadow: 0px 0px 2px 2px rgb(0, 148, 7);
+	object-fit: contain;
+	overflow: hidden;
+}
+
+.li_profile > h4 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.li_profile:hover {
+	transform: scale(1.1);
+	transition: 0.8s;
+}
+
+/* ========== SOLICITAÇÕES / PEDIDOS ========== */
+.account_requests {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border: 2px solid silver;
+	border-radius: 10px;
+	min-height: 20vh;
+	padding: 20px;
+	width: 80%;
+}
+
+.account_requests > ul {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 20px;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.account_requests > ul > a > li {
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.li_pedidos > img {
+	margin: 10px;
+	height: 110px;
+	width: 100px;
+	padding: 5px;
+	border-radius: 20%;
+	background-color: aliceblue;
+	box-shadow: 0px 0px 2px 2px rgb(0, 148, 7);
+	object-fit: contain;
+	overflow: hidden;
+}
+
+.li_pedidos > h4 {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.li_pedidos:hover {
+	transform: scale(1.1);
+	transition: 0.8s;
+}
+
+/* ========== MODAL ========= */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	z-index: 1000;
+	overflow-y: auto; /* segredo para scroll */
+}
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #000000c0;
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	min-width: 70vw;
+	width: 90%;
+	max-width: 600px;
+	min-height: 70vh;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(0, 156, 0);
+	z-index: 1001;
+	margin: 40px 0;
+}
+
+.close-button{
+	font-size: 14px;
+	font-weight: 500;
+	padding: 3px 12px;
+	border-radius: 5px;
+	width: 100px;
+	color: white;
+	border: none;
+	background-color: red;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-left: 20px;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 100px;
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 20%;
+	/* border: none; */
+	font-size: 24px;
+	font-weight: 600;
+	background: transparent;
+	color: white;
+	cursor: pointer;
+	z-index: 1002;
+}
+.close-btn:hover {
+	color: red;
+	transform: scale(1.2);
+	transition: 0.3s;
+}
+/* ========== FORMULÁRIO DE ENDEREÇO ========== */
+.endereco-item {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #363636;
+	border-radius: 8px;
+	gap: 10px;
+	background-color: #000;
+}
+
+.endereco-item > label > button {
+	margin-top: 15px;
+	padding: 8px 12px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background-color: red;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.endereco-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.endereco-form input {
+	flex: 1 1 calc(33% - 10px);
+	padding: 3px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+}
+
+/* ========== BOTÕES E AÇÕES ========== */
+.modal-options,
+.options {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	margin: 15px;
+}
+
+.options > button,
+.modal-options > button {
+	padding: 8px 12px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.options > button {
+	background-color: rgb(65, 65, 65);
+}
+
+.options > button:hover {
+	background-color: rgba(65, 65, 65, 0.5);
+}
+
+.modal-options > .add {
+	background-color: blue;
+}
+
+.modal-options > .save {
+	background-color: green;
+}
+
+.modal-options > .cancel {
+	background-color: red;
+}
+
+.editar {
+	font-size: 14px;
+	font-weight: 500;
+	padding: 3px 12px;
+	border-radius: 5px;
+	width: 200px;
+	color: white;
+	border: none;
+	background-color: blue;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.editar:hover,
+.modal-options > button:hover {
+	opacity: 80%;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+	.my_info > ul,
+	.account_requests > ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.li_profile,
+	.li_pedidos {
+		width: 80%;
+	}
+}
+

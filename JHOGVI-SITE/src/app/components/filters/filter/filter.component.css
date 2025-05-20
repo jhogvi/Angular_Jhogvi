@@ -1,0 +1,128 @@
+.filter__container {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid green;
+	background-color: transparent;
+	border-radius: 20px;
+	width: 17vw;
+	min-height: 75vh;
+	padding: 16px;
+
+}
+
+.filter__container>h1{
+	margin-bottom: 20px;
+}
+
+.filter_contents{
+flex-direction: column;
+display: flex;
+justify-content: space-between;
+padding-left: 15px;
+}
+
+.filter_contents > div {
+display: flex;
+flex-direction: column;
+}
+
+.filter_contents > div > h3{
+	margin: 0;
+	padding: 0;
+}
+
+.filter_buttons{
+	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	gap: 15;
+}
+
+.filter_buttons > button{
+	min-width: 5vw;
+	padding: 5px;
+	font-size: 12px;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+
+
+}
+
+	/* Botão estilizado */
+.filter{
+	background-color: #004d33;
+}
+.clean{
+	background-color: rgb(85, 0, 0);
+
+}
+.filter_buttons > button:hover {
+	font-weight: 600;
+	transition: 0.3s;
+
+}
+
+.filter_buttons > button:active {
+	transform: scale(1.1);
+
+}
+
+
+/* Faz o fundo do dropdown ficar visível */
+.mat-select-panel {
+	background-color: #222 !important; /* Cinza escuro para contraste */
+	color: white !important;
+}
+
+/* Deixa as opções visíveis */
+.mat-option {
+	background-color: rgba(0, 0, 0, 0.8) !important; /* Leve transparência */
+	color: white !important;
+}
+
+mat-form-field {
+	background-color: transparent !important;
+}
+
+.mat-form-field-flex {
+background-color: transparent !important;
+}
+
+.mat-input-element,
+.mat-select-trigger {
+background-color: transparent !important;
+color: white !important; /* texto visível sobre fundo escuro/transparente */
+}
+
+
+.filter_contents > div > mat-form-field + mat-form-field {
+margin-left: 8px;
+}
+
+mat-label{
+	background-color:transparent;
+}
+
+/* Remove o fundo preto que cobre a tela */
+.cdk-overlay-backdrop {
+	background: transparent !important; /* Deixa o fundo transparente */
+}
+
+/* Ajuste para botões dentro do overlay */
+.cdk-overlay-container {
+	z-index: 1000 !important; /* Garante que o dropdown apareça acima de tudo */
+}
+
+.alert-box{
+	margin: 20px 00px;
+	font-size: 16px;
+	font-weight: 600;
+	text-shadow: gray 2px 2px 2px;
+}
+
+.mat-elevation-z4 .alert-content{	padding: 20px;}

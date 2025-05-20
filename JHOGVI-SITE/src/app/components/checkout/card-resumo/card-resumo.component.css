@@ -1,0 +1,46 @@
+.resumo__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 2px solid rgba(192, 192, 192, 0.2);
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 10px;
+	gap: 12px;
+	width: 100%;
+	background-color: #000000;
+	box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.resumo_imagem img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+
+.resumo_info {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.values{
+	display: flex;
+	gap: 50px;
+	flex-direction: row;
+}
+
+.remove_button button {
+	background-color: #ff4d4d;
+	border: none;
+	color: white;
+	padding: 8px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.remove_button button:hover {
+	background-color: #cc0000;
+}

@@ -1,0 +1,94 @@
+app-social-media{
+	background-color: transparent;
+}
+
+.contact__container {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 10px;
+	font-size: 16px;
+  }
+
+  .contact__container > h1{
+	margin-bottom: 20px;
+  }
+
+
+  .contact_table {
+	border-collapse: collapse; /* Remove o espaço entre as células */
+	border-spacing: 0; /* Garante que não haja espaçamento extra */
+  }
+
+  .contact_table td {
+	padding: 5px 10px;
+	vertical-align: middle;
+  }
+
+  .contact_table td:first-child {
+	width: 30px; /* Define um tamanho fixo */
+	text-align: left; /* Alinha o texto à direita */
+	font-weight: 500;
+	white-space: nowrap; /* Evita que o texto quebre para a próxima linha */
+  }
+
+  .contact_table td a {
+	text-decoration: none;
+	color: inherit;
+  }
+
+  .contact_table td a:hover {
+	font-weight: 500;
+  }
+
+  .contact_table td a:active {
+	color: blue;
+	font-weight: 700;
+  }
+
+  .social_buttons{
+	margin-top: 40px;
+  }
+
+  .social_buttons>button {
+	min-width: 20vw;
+	padding: 1px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #00ffaa;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	overflow: visible;
+  }
+
+  .social_buttons>button:hover {
+	background-color: #00b679;
+	transform: scale(1.1);
+
+  }
+
+  .social_buttons>button:active {
+	font-weight: bold;
+  }
+
+
+  .social_buttons > button > a{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	list-style: none;
+	text-decoration: none;
+	color: inherit;
+	background-color: transparent;
+	height: 35px;
+  }
+
+  .social_buttons > button > a > h3{
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0px 20px;
+  }

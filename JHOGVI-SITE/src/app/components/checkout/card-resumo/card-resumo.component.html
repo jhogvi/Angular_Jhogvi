@@ -1,0 +1,17 @@
+<div class="resumo__container" >
+	<div class="resumo_imagem">
+		<img [src]="imgProduto">
+	</div>
+	<div class="resumo_info">
+		<h3>{{ titulo }}</h3>
+		<span *ngIf="detalhes">{{ detalhes}}</span>
+		<div class="values">
+			<p><strong>Valor:</strong> R$ {{ formatBrl.formatBrl(valor) }}</p>
+			<p><strong> Quantidade:</strong> {{ quantidade }}</p>
+			<p><strong>Total: </strong>R$ {{ formatBrl.formatBrl(valor * quantidade) }}</p>
+		</div>
+	</div>
+	<div class="remove_button">
+	<button (click)="removeItem(id)">Remover</button>
+	</div>
+</div>

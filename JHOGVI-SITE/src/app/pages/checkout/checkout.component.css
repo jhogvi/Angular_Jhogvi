@@ -1,0 +1,305 @@
+app-card-resumo{
+	width: 95%;
+}
+
+/* Container principal do Checkout */
+.checkout__container {
+	display: flex;
+	justify-content: space-between;
+	min-height: 77vh;
+	padding: 20px 10px;
+	flex-wrap: wrap; /* Adicionando flex-wrap para garantir que o conteúdo se ajuste em telas menores */
+  }
+
+  /* Lado esquerdo do Checkout */
+  .left {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid silver;
+	border-radius: 10px;
+	justify-content: space-between;
+	width: 60vw;
+	padding: 15px; /* Adicionando padding para melhorar o espaçamento interno */
+  }
+  /* ---------------------------
+	 Seções internas (endereços, pagamento, resumo)
+  ------------------------------ */
+  .checkout__section {
+	border: 1px solid #363636;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: #000000;
+  }
+
+  .checkout__section h2 {
+	margin-bottom: 15px;
+  }
+
+  /* ---------------------------
+	 Endereços
+  ------------------------------ */
+  .endereco-item {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #363636;
+	border-radius: 8px;
+	gap: 10px;
+	background-color: #000000;
+  }
+
+  .endereco-item>label>button{
+	margin-top: 15px;
+	padding: 8px 12px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	background-color: red;
+  }
+
+  .endereco-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+
+  .endereco-form input {
+	flex: 1 1 calc(33% - 10px);
+	padding: 3px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+  }
+
+  .address-actions {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	flex-wrap: wrap;
+  }
+
+  .address-actions button {
+	padding: 8px 12px;
+	border-radius: 5px;
+	border: none;
+	background-color: #0004ff;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+
+  .address-actions button:hover {
+	background-color: #000294;
+  }
+
+  /* ---------------------------
+	 Pagamento
+  ------------------------------ */
+  .checkout_payment {
+	padding-top: 15px;
+  }
+
+  .payment-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  }
+
+  .payment-options label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+  }
+
+
+
+
+  .checkout_street{
+	min-height: 100px;
+	border-top: 2px solid silver;
+
+
+  }
+
+  .checkout_street>div>button{
+	padding: 5px 12px;
+	border-radius: 5px;
+	border: none;
+	background-color: gray;
+	color: black;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 10px;
+  }
+
+  .checkout_street>div>button:hover{
+	font-weight: 600;
+	opacity: 80%;
+  }
+
+
+  .checkout_payment{
+	min-height: 100px;
+	border-top: 2px solid silver;
+
+  }
+
+
+  .checkout_payment> button{
+	padding: 5px 12px;
+	border-radius: 5px;
+	border: none;
+	background-color: gray;
+	color: black;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 10px;
+  }
+
+  .checkout_list{
+	min-height: 300px;
+	border-top: 2px solid silver;
+  }
+
+  .checkout_list div{
+	margin: 10px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: start;
+
+  }
+
+
+
+  /* Lado direito do Checkout */
+  .right {
+	min-width: 30vw;
+	height: auto; /* Ajustei para auto, para que o conteúdo se ajuste melhor */
+	display: flex;
+	flex-direction: column;
+	border: 3px solid silver;
+	border-radius: 20px;
+	justify-content: start;
+	padding: 15px;
+  }
+
+  /* Seção de Total */
+  .checkout_total {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+  }
+
+  /* Cards de resumo de produtos */
+  .resumo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 10px;
+	height: auto; /* Ajuste para que a altura seja dinâmica */
+  }
+
+  /* Conteúdo do resumo de preços */
+  .contents {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin-bottom: 10px;
+	gap: 15px; /* Corrigido para manter o espaço entre os elementos */
+	margin-top: 20px;
+  }
+
+  .contents div {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 20px;
+	flex-direction: row;
+  }
+
+  /* Preço e quantidade */
+  .contents h4 {
+	font-size: 16px;
+	font-weight: normal;
+  }
+
+  .resumo{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-end;
+
+  }
+
+
+  .resumo > div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  }
+
+  .resumo > div>  h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0px 20px;
+	margin-top: 10px;
+  }
+
+  /* Botão de finalizar compra */
+  .resumo > div> button {
+	width: 100%;
+	background-color: #0004ff;
+	color: white;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	transition: background-color 0.3s;
+  }
+
+  .resumo > div> button:hover {
+	background-color: #000294;
+  }
+
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+	.checkout__container {
+	  flex-direction: column;
+	}
+
+	.left {
+	  width: 90%;
+	  margin-bottom: 20px;
+	}
+
+	.right {
+	  width: 90%;
+	}
+
+	.checkout_total {
+	  width: 100%;
+	}
+
+	.checkout_total button {
+	  font-size: 14px;
+	}
+
+	.resumo {
+	  margin-top: 20px; /* Espaçamento extra para se separar do total */
+	}
+  }

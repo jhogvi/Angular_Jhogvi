@@ -1,0 +1,89 @@
+<div class="profile__container">
+	<div class="profile_edit">
+		<h2>Dados da Conta</h2>
+	</div>
+
+	<div class="profile_content">
+		<form (ngSubmit)="emitirSalvar()">
+			<div class="profile_contents">
+				<div>
+					<label for="nome">Primeiro Nome:</label>
+					<input [(ngModel)]="dadosEditaveis.firstName" id="nome" type="text" name="nome">
+				</div>
+				<div>
+					<label for="sobrenome">Sobrenome:</label>
+					<input [(ngModel)]="dadosEditaveis.lastName" id="sobrenome" type="text" name="sobrenome">
+				</div>
+				<div class="genero">
+					<label>Gênero:</label>
+					<div>
+						<label>
+							<input type="radio" name="genero" value="masculino" [(ngModel)]="dadosEditaveis.genero" />
+							Masculino
+						</label>
+						<label>
+							<input type="radio" name="genero" value="feminino" [(ngModel)]="dadosEditaveis.genero" />
+							Feminino
+						</label>
+						<label>
+							<input type="radio" name="genero" value="nao_informar" [(ngModel)]="dadosEditaveis.genero" />
+							Não Informar
+						</label>
+					</div>
+				</div>
+
+				<div class="typeAccount">
+					<label>Tipo de Conta:</label>
+					<div style="display: flex; gap: 16px;">
+						<label>
+							<input type="radio" name="tipoConta" [(ngModel)]="tipoContaSelecionado" [value]="'CPF'" />
+							Pessoa Física
+						</label>
+						<label>
+							<input type="radio" name="tipoConta" [(ngModel)]="tipoContaSelecionado" [value]="'CNPJ'" />
+							Pessoa Jurídica
+						</label>
+					</div>
+
+					<!-- Exibe campo CPF apenas se tipo for CPF -->
+					<div *ngIf="tipoContaSelecionado === 'CPF'">
+						<label for="cpf">CPF:</label>
+												<input
+						  [(ngModel)]="dadosEditaveis.tipoConta"
+						  name="cpf"
+						  type="text"
+						  mask="000.000.000-00"
+						  placeholder="000.000.000-00"
+						  class="input-mask"
+						/>
+
+					</div>
+
+					<!-- Exibe campo CNPJ apenas se tipo for CNPJ -->
+					<div *ngIf="tipoContaSelecionado === 'CNPJ'">
+						<label for="cnpj">CNPJ:</label>
+						<input
+						  [(ngModel)]="dadosEditaveis.tipoConta"
+						  name="cnpj"
+						  type="text"
+						  mask="00.000.000/0000-00"
+						  placeholder="00.000.000/0000-00"
+						  class="input-mask"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" [(ngModel)]="dadosEditaveis.email" id="email" name="email" />
+				</div>
+
+				<div class="profile_submit">
+					<button class="save" type="submit">Salvar</button>
+					<button class="cancel" type="button" (click)="fechar.emit()">Cancelar</button>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</div>

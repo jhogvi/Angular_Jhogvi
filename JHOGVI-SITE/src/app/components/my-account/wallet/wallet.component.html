@@ -1,0 +1,76 @@
+<div class="wallet__container">
+	<div class="bank__container">
+		<div>
+			<h2>Contas Bancárias</h2>
+		</div>
+		<div class="bankEditing" *ngIf="!isEditingBank">
+			<div class="banco" *ngFor="let banco of clientData.wallet.contasBancarias">
+				<p><strong>Titular: </strong> {{banco.titular}} - <strong>CPF/CNPJ: </strong> {{banco.cpfCnpjTitular}}</p>
+				<p><strong>Chave Pix: </strong> {{banco.chavePix}}</p>
+				<p><strong>{{banco.nomeBanco}}</strong> - Conta {{banco.tipoConta}}</p>
+				<p>Agencia: {{banco.agencia}} Conta: {{banco.numeroConta}}</p>
+			</div>
+			<div>
+				<button (click)="isEditingBank=true">Editar Dados</button>
+			</div>
+		</div>
+		<!-- Editar Contas Bancárias -->
+		<div class="bankEditing" *ngIf="isEditingBank">
+			<form [formGroup]="formWallet" (ngSubmit)="onSubmitBanco()">
+				<div formArrayName="bancos">
+				  <div class="inputs" *ngFor="let bancoCtrl of formBancoArray.controls; let i = index" [formGroupName]="i">
+					<input formControlName="titular" placeholder="Titular" />
+					<input formControlName="cpfCnpjTitular" placeholder="CPF/CNPJ">
+					<input formControlName="chavePix" placeholder="Chave Pix">
+					<input formControlName="nomeBanco" placeholder="Banco">
+					<input formControlName="tipoConta" placeholder="Tipo Conta">
+					<input formControlName="agencia" placeholder="Agência">
+					<input formControlName="numeroConta" placeholder="Número Conta">
+					<button type="button" (click)="removeAccount(i)">Remover</button>
+				</div>
+				</div>
+				<button type="button" (click)="addAccount()">+ Nova Conta</button>
+				<button type="submit" class="save">Salvar</button>
+				<button type="button" class="cancel" (click)="cancelEditing()">Cancelar</button>
+			</form>
+		</div>
+	</div>
+	<div class="card__container">
+		<div>
+			<h2>Cartões</h2>
+		</div>
+		<div class="cardEditing" *ngIf="!isEditingCard">
+			<div class="cartao" *ngFor="let cartao of clientData.wallet.cartoes ">
+				<div class="info">
+					<p class="numero-conta"> {{cartao.numero}}</p>
+					<p><strong>{{cartao.nomeTitular}}</strong></p>
+						<p>{{cartao.validade}}</p>
+					<p><strong> CVV:</strong> {{cartao.codigoSeguranca}}</p>
+				</div>
+				<div class="bandeira"><p><strong>{{cartao.bandeira}}</strong></p></div>
+			</div>
+			<div><button (click)="isEditingCard=true">Editar Cartões</button>
+			</div>
+		</div>
+
+		<!-- Editar Cartões -->
+		<div class="cardEditing" *ngIf="isEditingCard">
+			<form [formGroup]="formWallet" (ngSubmit)="onSubmitCartao()">
+				<div formArrayName="cartoes">
+					<div *ngFor="let cartaoCtrl of formCartaoArray.controls; let i = index" [formGroupName]="i">
+										<input formControlName="nomeTitular" placeholder="Nome Impresso no Cartão">
+					<input formControlName="numero" placeholder="Número do Cartão">
+					<input formControlName="validade" placeholder="Vencimento do Cartão">
+					<input formControlName="codigoSeguranca" placeholder="CVV">
+					<input formControlName="bandeira" placeholder="Bandeira (ELO|VISA|...)">
+					<button type="button" (click)="removeCard(i)">Remover</button>
+				</div>
+				</div>
+				<button type="button" (click)="addCard()">+ Novo Cartão</button>
+				<button type="submit" class="save">Salvar</button>
+				<button type="button" class="cancel" (click)="cancelEditing()">Cancelar</button>
+			</form>
+		</div>
+
+	</div>
+</div>

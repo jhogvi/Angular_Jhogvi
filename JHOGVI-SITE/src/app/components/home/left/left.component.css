@@ -1,0 +1,116 @@
+.left__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 79vh;
+
+  }
+
+
+.img-produto {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	position: relative;
+	z-index: 2;
+	background-color: transparent;
+	/* border: 1px solid red; */
+}
+
+  .img-produto > img {
+	/* border: 1px solid red; */
+
+	width: 75%;/*BORDAS BONE ATUAL ULTRAPASSA*/
+	height: 75%;/*BORDAS BONE ATUAL ULTRAPASSA*/
+	background-color: transparent;
+	object-fit: cover; /* Ajuste automático da imagem */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-in-out;
+}
+
+.fade-out {
+    opacity: 80%;
+}
+
+.left_button{
+	background-color: transparent;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+	position: static; /* Crucial para posicioná-lo sobre o boné */
+	z-index: 3;
+
+}
+
+
+.left_button>button{
+	all: unset; /* Remove todas as formatações padrão */
+	box-shadow: 1px 1px 5px 1px white;
+	margin-right: 30px;
+	text-align: center;
+	font-size: 10px;
+	border-radius: 20px;
+	width: 15vw;
+	height: 5vh;
+	background-color: rgb(1, 0, 59);
+}
+
+.left_button>button:hover{
+	background-color: rgb(1, 0, 88);
+	font-weight: bold;
+}
+
+.left_button>button:active{
+	transform: scale(0.8);
+}
+
+.home_buttons {
+	position: absolute; /* Para posicionar os botões na parte inferior */
+	display: flex;
+	flex-direction: row;
+	justify-content: center; /* Centraliza os botões */
+	gap: 10px; /* Espaçamento entre os botões */
+	flex-wrap: wrap; /* Permite que os botões se quebrem para a linha seguinte se necessário */
+	z-index: 3;
+	left: 10%; /* Fixa os botões à esquerda */
+	bottom: 2%; /* Distância da parte inferior da tela */
+  }
+
+  .home_buttons button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 80px; /* A metade da largura da tela */
+	height: 30px; /* A metade da largura da tela */
+
+	font-size: 14px; /* Tamanho de texto pequeno */
+	border: none; /* Remove borda */
+	border-radius: 5px; /* Bordas arredondadas */
+	cursor: pointer; /* Cursor de clique */
+	opacity: 0.6; /* Opacidade inicial */
+	box-shadow: 2px 2px 4px whitesmoke; /* Sombra leve para destaque */
+  }
+
+  .home_buttons button:hover {
+	opacity: 1; /* Opacidade total quando passar o mouse */
+	transform: scale(1.05); /* Aumenta o botão ligeiramente ao passar o mouse */
+  }
+
+  .home_buttons button:focus {
+	outline: none; /* Remove a borda de foco padrão */
+	box-shadow: 0 0 5px 2px rgba(0, 188, 119, 0.5); /* Destaque azul quando focado */
+  }
+
