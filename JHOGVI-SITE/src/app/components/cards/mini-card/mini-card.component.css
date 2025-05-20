@@ -89,7 +89,7 @@
 	margin: 10px;
 }
 
-.mini_buttons > button{
+.mini_buttons  button{
 	min-height: 15px;
 	padding: 10px;
 	border-radius: 15px;
@@ -103,15 +103,15 @@
 
 }
 
-.mini_buttons > button > a {
+.mini_buttons  a {
 	color: white;
 	text-decoration: none;
 }
 
-.mini_buttons > button:hover{
+.mini_buttons button:hover{
 	font-weight: 600;
 }
-.mini_buttons > button:active{
+.mini_buttons button:active{
 	transform: scale(1.1);
 }
 

@@ -10,8 +10,9 @@
 	</a>
 
 		<div class="mini_buttons">
-			<button><a [routerLink]="['/produto', id]">Ver Detalhes</a></button>
-			<button (click)="addProductToCart()">Adicionar ao Carrinho</button>
+			<a [routerLink]="['/produto', id]"><button>Ver Detalhes</button></a>
+			<!-- <button (click)="addProductToCart()">Adicionar ao Carrinho</button> -->
+			<a [href]="comprarProd" target="_blank"><button>Comprar</button></a>
 		</div>
 
 </div>

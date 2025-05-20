@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   titulo: string = '';
   descricao: string = '';
   detalhes: string[] = [];
+  link?:string;
 
   // Tipado para Produto ou null
   selectedBone: Produto | null = null;

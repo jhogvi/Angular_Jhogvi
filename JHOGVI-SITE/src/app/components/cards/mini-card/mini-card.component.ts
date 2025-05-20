@@ -17,7 +17,8 @@ export class MiniCardComponent {
 	@Input() price!: number;
 	@Input() id!: number;
 	@Input() cor!: string[]; // Adicionando cor como Input
-	@Input() detail!:string[]
+	@Input() detail!:string[];
+	@Input() comprarProd?: string='';
 
 	constructor(
 	  public formatBrl: ValuesService,

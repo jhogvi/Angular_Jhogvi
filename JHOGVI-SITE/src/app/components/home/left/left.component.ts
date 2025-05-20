@@ -12,9 +12,10 @@ export class LeftComponent {
 	imgMockups: string[] = [];
 	@Input()
 	backgroundImage: string = '';
+	@Input() comprarProd?: string;
 
 	currentMockupIndex: number = 0;
-	@Output() comprar = new EventEmitter<void>(); // avisa o componente pai
+	// @Output() comprar = new EventEmitter<void>(); // avisa o componente pai
 
 
 	constructor() {
@@ -50,9 +51,9 @@ export class LeftComponent {
 			// 'height': '77vh'
 		};
 	}
-	onComprarClick() {
-		this.comprar.emit(); // dispara o evento pro pai
-	  }
+	// onComprarClick() {
+	// 	this.comprar.emit(); // dispara o evento pro pai
+	//   }
 
 
 }

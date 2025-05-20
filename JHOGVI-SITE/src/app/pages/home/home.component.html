@@ -9,11 +9,16 @@
 			</button>
 		</div>
 		<div class="left">
+			<!-- <app-left
+			*ngIf="selectedBone; else placeholderLeft"
+			[imgMockups]="selectedBone.imagens"
+			[backgroundImage]="'assets/plataforma_digital.jpg'"
+			(comprar)="handleComprar()"/> -->
 			<app-left
 			*ngIf="selectedBone; else placeholderLeft"
 			[imgMockups]="selectedBone.imagens"
 			[backgroundImage]="'assets/plataforma_digital.jpg'"
-			(comprar)="handleComprar()"/>
+			[comprarProd]="selectedBone.link"/>
 		</div>
 		<ng-template #placeholderLeft>
 			<div class="placeholder">Selecione um produto para ver os detalhes</div>
