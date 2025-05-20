@@ -5,7 +5,7 @@ import { Evento } from '../models/evento';
 export const produtos:Produto[] = [{
 	id: 1001,
 	categoria: 'Bone',
-	titulo: 'Jhogvi Negócios e Oportunidades',
+	titulo: 'Boné Jhogvi',
 	descricao: ['Um boné que não é apenas um acessório de moda, mas também um dispositivo inteligente que pode ser usado para acessar eventos ou locais específicos.',
 		'Integrado tecnologia RFID proporcionar um toque moderno  permitindo o acesso a lugares privados de maneira segura e prática.',
 		'Possui chip criptografado, que é seguro e capaz de armazenar informações de forma criptografada, garantindo que apenas usuários autorizados possam acessar os locais.'],
@@ -18,7 +18,7 @@ export const produtos:Produto[] = [{
 	],
 	videos:[],
 	preco: 59.90,
-	link: 'https://jhogvi.lojaintegrada.com.br/bone-negocios-e-oportunidades'
+	link: 'https://jhogvi.lojaintegrada.com.br/bone-jhogvi'
 	},
 	{
 	id: 1002,
@@ -34,7 +34,7 @@ export const produtos:Produto[] = [{
 	],
 	videos:[],
 	preco: 64.90,
-	link: 'https://jhogvi.lojaintegrada.com.br/bone-negocios-e-oportunidades'
+	link: 'https://jhogvi.lojaintegrada.com.br/bone-jhogvi'
 	}
 ];
 
