@@ -3,7 +3,7 @@ export interface Produto {
 	categoria: string;
 	cor: string[];
 	imagens: string[];
-	videos?:string[];
+	videos:string[];
 	titulo: string;
 	descricao?: string[];
 	detalhes: string[];

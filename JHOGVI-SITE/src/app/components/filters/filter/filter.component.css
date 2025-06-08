@@ -1,24 +1,22 @@
 .filter__container {
 	display: flex;
 	flex-direction: column;
-	border: 3px solid green;
+	box-shadow: 0px 0px 3px 3px green;
 	background-color: transparent;
 	border-radius: 20px;
-	width: 17vw;
-	min-height: 75vh;
-	padding: 16px;
-
+	max-width: 100%;
+	max-height: 100%;
+	padding: 20px;
 }
 
-.filter__container>h1{
-	margin-bottom: 20px;
-}
+/* .filter__container>h1{} */
 
 .filter_contents{
 flex-direction: column;
 display: flex;
 justify-content: space-between;
-padding-left: 15px;
+padding: 20px;
+
 }
 
 .filter_contents > div {
@@ -44,7 +42,7 @@ flex-direction: column;
 
 .filter_buttons > button{
 	min-width: 5vw;
-	padding: 5px;
+	padding: 5px 30px;
 	font-size: 12px;
 	color: white;
 	border-radius: 5px;

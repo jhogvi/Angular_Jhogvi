@@ -18,16 +18,9 @@
 		[showFeedback]="showFeedback"
   		/>
 	</div>
-<div>
-
-</div>
 	<div class="events_cards">
 		<h1>Eventos</h1>
-		<!-- <div *ngIf="showFeedback" class="feedback-box">
-			{{ feedbackMessage }}
-		</div> -->
 		<div *ngIf="filteredEvents.length !== 0; else noEvents">
-			<!-- Cards dos Eventos -->
 			<app-card-event
 			  *ngFor="let event of filteredEvents"
 			  [id]="event.id"
@@ -40,10 +33,10 @@
 			  [date]="event.data"
 			  [price]="event.entrada"
 			/>
-		  </div>
+		</div>
 
-		  <ng-template #noEvents>
+		<ng-template #noEvents>
 			<p>Nenhum resultado encontrado.</p>
-		  </ng-template>
+		</ng-template>
 	</div>
 </div>

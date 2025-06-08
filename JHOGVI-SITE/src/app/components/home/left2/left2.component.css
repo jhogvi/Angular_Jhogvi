@@ -1,0 +1,45 @@
+.left_container{		min-height: 400px;display: flex;flex-direction: column;align-items: center;justify-content: flex-start;width: 100%;height: 100%; background-color: black;}
+.left_video{width: 100%; overflow: hidden;position: relative;}
+.left_video >video{object-fit: cover;width: 100%; height: 100%;z-index: 1;}
+/* .left_video >video >source{ } */
+.left_button {
+	position: absolute; /* sobrepõe o vídeo */
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 0; /* ou ajuste conforme necessário */
+	/* border: 2px solid red; só para visualização */
+	background-color: transparent;
+}
+
+.left_button a {
+	text-decoration: none;
+	color: inherit;
+
+}
+.left_button button{
+	all: unset; /* Remove todas as formatações padrão */
+	box-shadow: 1px 1px 5px 1px white;
+	padding: 0px 30px;
+	text-align: center;
+	font-size: 10px;
+	border-radius: 20px;
+	width: 15vw;
+	height: 5vh;
+	background-color: rgb(1, 0, 59);
+	z-index: 999;
+}
+
+.left_button button:hover{
+	background-color: rgb(1, 0, 88);
+	font-weight: bold;
+}
+
+.left_button button:active{
+	transform: scale(0.8);
+}

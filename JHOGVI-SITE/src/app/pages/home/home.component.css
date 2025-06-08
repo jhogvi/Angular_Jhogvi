@@ -1,32 +1,24 @@
-app-left, app-right{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
 .home__container {
 	width: 100%;
-	min-height: 79vh;
+	min-height: 77vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;
+	position: relative; /* Garante que a imagem do produto fique sobre o fundo */
 }
 
 .content {
-
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
 justify-content: space-between;
 align-items: flex-start;
 width: 100%;
-min-height: 77vh ;
+min-height: 78vh ;
 }
 
 .content > .bone_filter {
-
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -37,18 +29,19 @@ overflow: hidden;
 }
 
 .bone_filter {
-
 position: absolute;
-left: 0;
-gap: 10px;
-width: 150px;
-height: 60vh;
-margin-top: 10vh;
-z-index: 5;
 display: flex;
 flex-direction:row;
 flex-wrap: wrap;
 justify-content: center; /* centraliza os botões */
+
+left: 10px;
+top: 30%;
+z-index: 5;
+
+gap: 10px;
+width: 150px;
+height: 60vh;
 background-color: transparent;
 }
 
@@ -89,14 +82,48 @@ opacity: 1;
 }
 
 .left{
-	width: 48vw;
+
+	width: 50%;
 	height: 78vh;
 	min-height: auto;
 
 }
 .right{
-	width: 48vw;
+	width: 50%;
 	height: 78vh;
 	min-height: auto;
 
+}
+
+@media (max-width:720px){
+	app-left2{
+		/* border: 3px solid white; */
+		width: 100%;
+		height: 400px;
+
+	}
+	app-right{width: 100%;}
+	.content {
+		flex-direction: column;
+		flex-wrap: wrap; /* opcional, mas pode manter */
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+	}
+
+	.left,
+	.right {
+		height: auto;
+		width: 100%;
+		/* border: 3px solid white; */
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.bone_filter {
+		position: absolute;
+		left: 10px;
+		top: 15%;
+	}
 }

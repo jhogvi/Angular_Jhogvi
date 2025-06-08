@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { MenuBarComponent } from './components/nav-bar/menu-bar/menu-bar.component';
 import { FooterBarComponent } from './components/nav-bar/footer-bar/footer-bar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -39,6 +38,8 @@ import { CardResumoComponent } from './components/checkout/card-resumo/card-resu
 import { MatCardModule } from '@angular/material/card';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { AlertCompraComponent } from './components/alert-compra/alert-compra.component';
+import { Left2Component } from './components/home/left2/left2.component';
+import { AppComponent } from './app.component';
 
 
 
@@ -73,6 +74,7 @@ import { AlertCompraComponent } from './components/alert-compra/alert-compra.com
     OrdersComponent,
     CardResumoComponent,
     AlertCompraComponent,
+    Left2Component,
   ],
   imports: [
 	ReactiveFormsModule,

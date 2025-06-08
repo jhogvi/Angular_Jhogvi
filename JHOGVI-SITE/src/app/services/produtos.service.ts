@@ -1,18 +1,7 @@
 import { Injectable } from '@angular/core';
-import { produtos } from '../data/data';
+import { Produto } from '../models/produto';
 import { Observable, of } from 'rxjs';
-
-export interface Produto {
-  id: number;
-  categoria: string;
-  cor: string[];
-  imagens: string[];
-  titulo: string;
-  descricao?: string[];
-  detalhes: string[];
-  preco: number;
-  qtd?:number;
-}
+import { produtos } from '../data/data';
 
 interface Categoria <T=Produto>{
   id: number;

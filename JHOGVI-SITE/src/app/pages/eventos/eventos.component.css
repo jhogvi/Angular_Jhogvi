@@ -1,69 +1,82 @@
+app-filter{width: 100%;}
 app-card-event{
-	width: 87%;
-	margin-right: 10px;
+	height: 250px;
+	width: 100%;
+	/* border: 3px solid white; */
 }
-.feedback-box {
-	padding: 10px;
-	margin-bottom: 15px;
-	border-radius: 5px;
-	font-weight: bold;
-	text-align: center;
-	background-color: transparent;
-	border: 1px solid #ccc;
-	animation: fadeIn 0.3s ease;
-  }
 
-  @keyframes fadeIn {
-	from { opacity: 0; transform: translateY(-10px); }
-	to { opacity: 1; transform: translateY(0); }
-  }
-
-
-.eventos__container{
+.eventos__container {
+	min-height: 90vh;
 	display: flex;
 	flex-direction: row;
-	min-height: 75vh;
+	flex-wrap: nowrap;
+	align-items: flex-start;
 	justify-content: space-between;
-	padding: 30px 15px;
+	margin: 30px 20px;
 	gap: 10px;
-	flex-wrap: wrap;
-
 }
-.events_filter {
-	flex: 1 1 20%;
-  }
 
-  .events_cards {
-	flex: 1 1 75%;
+.events_filter {
+	display: flex;
+	flex-direction: row;
+	width: 25%;
+	/* border: 2px solid red; */
+}
+
+.events_cards {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	width: 70%;
+	min-height: 60vh;
+	border-radius: 15px;
+	box-shadow: 0px 0px 3px 3px green;
+}
+
+.events_cards > h1 {
+	padding-top: 20px;
+	margin-left: 20px;
+}
+
+.events_cards > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	gap: 20px;
-	width: 77vw;
-	padding: 15px 0px;
-
-	border-radius: 15px;
-	border: 3px solid green;
+	padding: 20px;
 }
 
-.events_cards>div{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	/* border: 2px solid red; */
-	width: 90%;
-	gap: 20px;
-	align-items: flex-start;
-	justify-content: center;
+@media (max-width: 768px) {
+	app-card-event{
+		height: 500px;
+		width: 100%;
+		/* border: 3px solid white; */
+	}
+
+	.eventos__container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 20px;
+	}
+
+	.events_filter {
+		width: 80%;
+	}
+
+	.events_cards {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90%;
+	}
+
+	.events_cards > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		overflow: hidden;
+		min-height: 500px;
+	}
 }
-
-
-.eventos_elements{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-}
-
-

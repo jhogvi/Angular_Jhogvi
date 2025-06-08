@@ -1,129 +1,39 @@
-.menu__container{
-	position: static; /* Começa como absoluto */
-	top: 0;
-	z-index: 999;
-
-
+.menu__container {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-
-	min-height: 100px;
-	/*width: 98vw; */
-	width: 100%;
+	flex-wrap: wrap;
 	background-color: black;
+	padding: 10px;
 	border-bottom: 4px solid rgb(3, 85, 0);
 }
 
-/* .menu__container.fixed {
-	position: fixed;
-	top: 0;
-	width: 99vw;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao fixar */
-	/* transform: translateY(10); Suaviza o movimento */
-  /* } */
-
-
-.menu_logo{
-	background-color:inherit;
-	height: 100%;
-	width: 15vw;
-
-}
-
-.menu_logo > a {
-    display: block; /* Torna o link um bloco para que ele ocupe o espaço todo do container */
-	height: 90px;
+.menu_logo img {
 	width: 90px;
-	overflow: hidden;
-	background-color: transparent;
-	border-radius: 50%; /* Imagem circular */
-	margin: 10px 30px ;
-	position: relative;  /* Permite posicionar a imagem dentro do link */
+	height: 90px;
+	border-radius: 50%;
 }
 
-.menu_logo > a > img {
-	position: absolute;  /* Permite que a imagem ocupe toda a área do link */
-    top: 50%;  /* Posiciona a imagem no centro vertical do link */
-    left: 50%;  /* Posiciona a imagem no centro horizontal do link */
-    transform: translate(-50%, -50%);  /* Ajusta para que a imagem fique perfeitamente centralizada */
-    object-fit: cover; /* Faz com que a imagem se ajuste corretamente, mantendo a proporção */
-
-    height: 90%;
-    width: 90%;
-	background-color: transparent;
-}
-
-.menu_search{
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-}
-
-.search{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 25px;
-	width: 20vw;
-
-	border-radius: 15px;
-	padding: 0px 15px;
-	border: 2px solid silver;
-}
-
-.search:focus-within{
-	box-shadow: 0px 0px 3px aqua;
-	transform: scale(1.1);
-}
-
-
-
-.search>input{
-	all: unset; /* Remove todas as formatações padrão */
-	width: 85%;
-
-}
-
-.search>button{
-	all: unset; /* Remove todas as formatações padrão */
+.menu_toggle {
+	display: none;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 30px;
 	cursor: pointer;
-	width: 10%;
-
-
 }
 
-.search>button:active{
-	transform: scale(0.8);
-}
-
-
-.menu_options{
-	display: block; /* Torna o link um bloco para que ele ocupe o espaço todo do container */
-
-	min-width: 50vw;
+/* Menu normal */
+.menu_options {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-
 }
 
-.options{
-
+.menu_options ul.options {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	list-style: none;
+	gap: 20px;
 }
-
 .options > a {
 	list-style: none;
 	text-decoration: none;
@@ -164,3 +74,27 @@
   .options > a > li:hover::after {
 	width: 100%;  /* Faz a linha se expandir */
   }
+
+/* MOBILE */
+@media (max-width: 768px) {
+	.menu_toggle {
+		display: block;
+	}
+
+	.menu_options {
+		display: none;
+		width: 100%;
+	}
+
+	.menu_options.open {
+		display: flex;
+		justify-content: center;
+	}
+
+	.menu_options ul.options {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		gap: 15px;
+	}
+}

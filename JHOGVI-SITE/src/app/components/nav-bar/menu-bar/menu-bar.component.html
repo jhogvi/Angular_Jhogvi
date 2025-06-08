@@ -1,40 +1,21 @@
-<div class="menu__container" >
-	<!-- <div class="menu__container" [ngClass]="{ 'fixed': isFixed }"> -->
+<div class="menu__container">
 	<div class="menu_logo">
 		<a [routerLink]="['']">
-			<img src="assets/camaleao_logo2.jpg" alt="Logo">
+			<img src="assets/img/jhogvi.png" alt="Logo">
 		</a>
 	</div>
-	<div class="menu_search" >
-		<!-- <div class="search" tabindex="0">
-			<input type="text" placeholder="Pesquisar..." />
-			<button>🔍</button>
-		</div> -->
-		  <!-- <div *ngIf="searchResults.length">
-			<ul>
-			  <li *ngFor="let result of searchResults">{{ result }}</li>
-			</ul>
-		  </div>-->
-	</div>
-	<div class="menu_options">
+
+	<!-- Botão hamburguer -->
+	<button class="menu_toggle" (click)="toggleMenu()">☰</button>
+
+	<!-- Menu de opções -->
+	<div class="menu_options" [ngClass]="{ 'open': isMenuOpen }">
 		<ul class="options">
-			<a [routerLink]="['']">
-				<li>Jhogvi</li>
-			</a>
-			<a [routerLink]="['produtos']">
-				<li>Produtos</li>
-			</a>
-			<a [routerLink]="['eventos']">
-				<li>Eventos</li>
-			</a>
-
-			<!-- <a [routerLink]="['carrinho']">
-				<li>Carrinho</li>
-			</a> -->
-			<a [routerLink]="['suporte']">
-				<li>Suporte</li>
-			</a>
+			<a [routerLink]="['']"><li>Jhogvi</li></a>
+			<a [routerLink]="['produtos']"><li>Produtos</li></a>
+			<a [routerLink]="['eventos']"><li>Eventos</li></a>
+			<!-- <a [routerLink]="['carrinho']"><li>Carrinho</li></a> -->
+			<a [routerLink]="['suporte']"><li>Suporte</li></a>
 		</ul>
-
 	</div>
 </div>

@@ -9,15 +9,11 @@
 			</button>
 		</div>
 		<div class="left">
-			<!-- <app-left
+			<app-left2
 			*ngIf="selectedBone; else placeholderLeft"
+			[video]="selectedBone.videos[0]"
 			[imgMockups]="selectedBone.imagens"
-			[backgroundImage]="'assets/plataforma_digital.jpg'"
-			(comprar)="handleComprar()"/> -->
-			<app-left
-			*ngIf="selectedBone; else placeholderLeft"
-			[imgMockups]="selectedBone.imagens"
-			[backgroundImage]="'assets/plataforma_digital.jpg'"
+
 			[comprarProd]="selectedBone.link"/>
 		</div>
 		<ng-template #placeholderLeft>
@@ -30,9 +26,7 @@
 			[titulo]="selectedBone.titulo"
 			[descricao]="selectedBone.descricao"
 			[detalhes]="selectedBone.detalhes"/>
-		 </div>
-
-
+		</div>
 	</div>
 </div>
 

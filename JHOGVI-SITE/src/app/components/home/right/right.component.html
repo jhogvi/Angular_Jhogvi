@@ -2,7 +2,9 @@
 	<div class="right_informations">
 		<h1>{{titulo}}</h1>
 		<p *ngFor="let frase of descricao">{{frase}}</p>
-		<span *ngFor="let detalhe of detalhes">{{detalhe}}</span>
+		<p>Tecnologia:
+			<span *ngFor="let detalhe of detalhes">{{detalhe}}</span>
+		</p>
 	</div>
 	<div class="social_buttons">
 		<app-social-media

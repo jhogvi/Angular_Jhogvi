@@ -16,7 +16,7 @@ export const produtos:Produto[] = [{
 		'assets/3d/mockup4.png', 'assets/3d/mockup5.png', 'assets/3d/mockup6.png',
 		'assets/3d/mockup7.png', 'assets/3d/mockup8.png', 'assets/3d/mockup9.png', 'assets/3d/mockup10.png'
 	],
-	videos:[],
+	videos:['assets/video/jhogvi-preto.webm'],
 	preco: 59.90,
 	link: 'https://jhogvi.lojaintegrada.com.br/bone-jhogvi'
 	},
@@ -32,7 +32,7 @@ export const produtos:Produto[] = [{
 		'assets/3d/mockup4.png', 'assets/3d/mockup5.png', 'assets/3d/mockup6.png',
 		'assets/3d/mockup7.png', 'assets/3d/mockup8.png', 'assets/3d/mockup9.png', 'assets/3d/mockup10.png'
 	],
-	videos:[],
+	videos:['assets/video/jhogvi-branco.webm'],
 	preco: 64.90,
 	link: 'https://jhogvi.lojaintegrada.com.br/bone-jhogvi'
 	}

@@ -7,6 +7,11 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrl: './menu-bar.component.css'
 })
 export class MenuBarComponent {
+	isMenuOpen = false;
+
+	toggleMenu() {
+		this.isMenuOpen = !this.isMenuOpen;
+	}
 	// isFixed: boolean = false; // Define se a barra fica fixa ou não
 
 	// @HostListener('window:scroll', [])

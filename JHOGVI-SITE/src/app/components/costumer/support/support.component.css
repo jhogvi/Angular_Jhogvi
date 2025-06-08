@@ -8,13 +8,11 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px solid white;
-	min-height: 50vh;
-	min-width: 25vw;
-
-	width: 25vw;
-	padding: 20px;
+	border: 2px solid green;
+	padding: 20px 0 ;
+	width: 100%;
 	border-radius: 20px;
+	max-width: 100%;
   }
 
   .support_content{
@@ -23,6 +21,7 @@
 	display: flex;
 
 	flex-direction: column;
+	align-items: center;
 	justify-content: space-between;
   }
 
@@ -30,11 +29,12 @@
   .support_items {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: start;
+	width: 80%;
   }
 
   .support_items > p{
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 500;
 
 
@@ -97,7 +97,7 @@
 
   .error {
 	color: red;
-	font-size: 12px;
+	font-size: 16px;
 	margin-top: 5px;
 	display: block;
   }
