@@ -33,10 +33,11 @@
 	font-family: Arial, sans-serif;
   }
   .informacao{
-	height: 20%;
+	min-height: 20%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 20px 0;
 	justify-content: space-around;
 
   }
@@ -51,33 +52,31 @@
   }
 
 .produtos {
-	margin-top: 1rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: start;
 	justify-content: space-around;
-	gap: 0.5rem;
-	height: 50%;
+	gap: 10px;
+	min-height: 30%;
 }
 
 .btn-produto {
 	min-width: 150px;
 	min-height: 40px;
+	border: 2px solid rgb(0, 190, 0);
 
-	background-color: #1976d2;
+	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 	padding: 10px 10px;
-	border: none;
 	border-radius: 8px;
 	cursor: pointer;
 	transition: background-color 0.2s;
-	font-size: 18px;
-
+	font-size: 16px;
 }
 
 .btn-produto:hover {
-	background-color: #125ca1;
+	background-color:  rgb(0, 100, 0);
 	font-weight: 600;
 }
 
@@ -89,11 +88,12 @@
 }
 
 .btn-cancelar {
-	background-color: rgba(255, 0, 0, 0.692);
+	background-color: black;
+
 	color: white;
 	width: 100px;
 	padding: 0.4rem 1rem;
-	border: none;
+	border: 2px solid  rgba(255, 0, 0, 0.692);
 	border-radius: 6px;
 	cursor: pointer;	transition: background-color 0.2s;
 	font-size: 16px;

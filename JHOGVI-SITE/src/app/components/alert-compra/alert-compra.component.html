@@ -7,13 +7,15 @@
 	</div>
 	<div class="produtos">
 		<button
-		  *ngFor="let produto of produtosVinculados"
-		  (click)="redirecionarPara(produto.id)"
-		  class="btn-produto">Ver Produto {{produto.id}}</button>
-	  </div>
+		*ngFor="let produto of produtosVinculados"
+		(click)="redirecionarPara(produto.id)"
+		class="btn-produto">
+			Produto {{produto.id}}
+		</button>
+	</div>
 
-	  <div class="botoes">
+	<div class="botoes">
 		<button class="btn-cancelar" (click)="fechar()">Fechar</button>
-	  </div>
+	</div>
 
 </div>
