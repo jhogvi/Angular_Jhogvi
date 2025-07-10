@@ -17,24 +17,17 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 70%;
-	position: relative;
+	height: 60%;
 	z-index: 2;
 	background-color: transparent;
-	/* border: 1px solid red; */
+
 }
 
   .img-produto > img {
-	/* border: 1px solid red; */
-
-	width: 75%;/*BORDAS BONE ATUAL ULTRAPASSA*/
-	height: 75%;/*BORDAS BONE ATUAL ULTRAPASSA*/
+	margin-top: 15px;
+	height: 70%;/*BORDAS BONE ATUAL ULTRAPASSA*/
 	background-color: transparent;
 	object-fit: cover; /* Ajuste automático da imagem */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     transition: opacity 0.4s ease-in-out;
 }
 

@@ -15,6 +15,12 @@
 			[imgMockups]="selectedBone.imagens"
 
 			[comprarProd]="selectedBone.link"/>
+			<!-- <app-left
+			*ngIf="selectedBone; else placeholderLeft"
+			[imgMockups]="selectedBone.imagens"
+			backgroundImage="assets/plataforma_digital.jpg"
+			[comprarProd]="selectedBone.link"
+			/> -->
 		</div>
 		<ng-template #placeholderLeft>
 			<div class="placeholder">Selecione um produto para ver os detalhes</div>
