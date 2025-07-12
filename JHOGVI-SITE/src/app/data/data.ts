@@ -83,6 +83,6 @@ export const eventos:Evento[]=[
 		localidade: 'Toledo',
 		endereco: 'Mais informações com 50% dos ingressos vendidos .',
 		local:'',
-		data:'26-09-2026',
+		data:'',
 		entrada: 0.0
 	}]

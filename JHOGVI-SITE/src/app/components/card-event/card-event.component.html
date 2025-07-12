@@ -9,11 +9,12 @@
 			<h4 class="city">Localizado em {{city}}</h4>
 			<span class="street">Endereço: {{street}}</span>
 			<div class="valor">
-				<h3 *ngIf="price<=0">Entrada Gratuita para Primeiras Compras</h3>
+				<h4 *ngIf="price<=0">Entrada com a compra de produtos Jhogvi</h4>
 				<span *ngIf="price>0"><strong>Ingresso: </strong> R$ {{formatBrl.formatBrl(price)}}</span>
 
 			</div>
-			<p class="date">Acontecerá no dia {{date}}</p>
+			<p class="date" *ngIf="date!=''||null">Acontecerá no dia {{date}}</p>
+			<p class="date" *ngIf="date==''||null"><strong>Data Indeterminada</strong></p>
 		</div>
 	</a>
 
